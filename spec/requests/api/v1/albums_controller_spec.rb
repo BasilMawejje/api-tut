@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Api::V1::AlbumsController, type: :controller do
   describe 'GET /v1/albums' do
     context 'return 1 album' do
-      let!(:album) {create(:album, title: 'GKMC')}
+      let(:album) {create(:album, title: 'GKMC')}
 
       it 'should return an album' do
         get :index

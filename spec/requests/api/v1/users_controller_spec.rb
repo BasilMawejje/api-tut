@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Api::V1::UsersController, type: :controller do
   describe 'GET /v1/users' do
     context 'return 1 user' do
-      let!(:user) {create(:user, name: 'Basil')}
+      let(:user) {create(:user, name: 'Basil')}
 
       it 'should return a user' do
         get :index

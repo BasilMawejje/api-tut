@@ -8,6 +8,7 @@ RSpec.describe Api::V1::PurchasesController, type: :controller do
 
       it 'should create a purchase' do
         post :create
+        # expect { response }.to change(Purchase, :count).by(1)
         expect(response.status).to eq 201
       end
     end

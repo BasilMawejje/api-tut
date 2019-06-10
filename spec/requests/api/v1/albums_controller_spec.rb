@@ -20,7 +20,7 @@ RSpec.describe Api::V1::AlbumsController, type: :controller do
       it 'gets 5 albums' do
         get :index
 
-        expect(response_json.count).to eq 5
+        expect(response_json['data'].count).to eq 5
       end
     end
   end
